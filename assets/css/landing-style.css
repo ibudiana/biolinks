@@ -1,0 +1,270 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap");
+
+:root {
+  /* Color */
+  --color1: #476ef9;
+  --color2: #659aff;
+  --color3: #d547f9;
+  --color4: #2b3138;
+  --color5: #f7f1f1;
+  --color6: #f7f9fe;
+
+  /* Font */
+  --font1: "Quicksand", sans-serif;
+  --font2: "Poppins", sans-serif;
+
+  /* Spacing */
+  --spacing-1: 4px;
+  --spacing-2: 8px;
+  --spacing-3: 12px;
+  --spacing-4: 16px;
+  --spacing-5: 20px;
+  --spacing-6: 24px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color6);
+}
+
+h1 {
+  font-family: var(--font1);
+  font-size: 31px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+}
+
+h2 {
+  font-family: var(--font1);
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+}
+
+h3 {
+  font-family: var(--font1);
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 120%;
+}
+
+p,
+span {
+  font-family: var(--font2);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 200%;
+}
+
+ul {
+  list-style: none;
+}
+
+.btn {
+  font-family: var(--font1);
+  text-align: center;
+  color: var(--color5);
+  background-color: var(--color2);
+  padding: 8px 12px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: var(--color3);
+}
+
+a {
+  font-family: var(--font2);
+  text-decoration: none;
+  color: var(--color4);
+}
+
+a:hover {
+  color: var(--color3);
+}
+
+.icon {
+  fill: var(--color4);
+  cursor: pointer;
+}
+
+.icon:hover {
+  fill: var(--color3);
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 4px 16px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.container:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.container header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px 24px 24px;
+}
+
+.container header nav .menu ul {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.container header nav .right ul {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.container main .hero {
+  display: flex;
+  padding: 24px;
+  justify-content: space-between;
+  background-color: var(--color5);
+}
+
+.container main .hero .hero-content {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.container main .hero .hero-image {
+  max-width: 400px;
+}
+
+.container main .hero .hero-content .card {
+  display: flex;
+  padding-top: 12px;
+  gap: 12px;
+  justify-content: space-between;
+}
+
+main .banner img {
+  width: 100%;
+}
+
+main .hero .hero-content .card .card-item {
+  display: flex;
+  max-width: 184px;
+  padding: 24px 12px;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  border-radius: 12px;
+  background: var(--color6);
+  box-shadow: 0px 4px 6px -4px rgba(19, 25, 39, 0.12),
+    0px 8px 8px -4px rgba(19, 25, 39, 0.08);
+  cursor: pointer;
+}
+
+main .hero .hero-content .card .card-item svg {
+  fill: var(--color4);
+  cursor: pointer;
+}
+
+main .hero .hero-content .card .card-item:hover svg {
+  fill: var(--color6);
+}
+
+main .hero .hero-content .card .card-item:hover {
+  background: var(--color4);
+  color: var(--color6);
+}
+
+/* sign-up / login*/
+main .sign-up {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px;
+  background: var(--color5);
+  min-height: 600px;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+main .sign-up .sign-up-left{
+    width: 50%;
+    background: var(--color2);
+    padding: 177px 98px;
+    color: var(--color6);
+    height: 600px;
+}
+
+main .sign-up .sign-up-right{
+    width: 50%;
+    background: var(--color6);
+    padding: 136px 110px;
+    height: 600px;
+
+}
+
+main .sign-up .sign-up-right form{
+    display: flex;
+    flex-direction: column;
+}
+
+main .sign-up .sign-up-right form input{
+    padding: 12px 24px;
+    margin-bottom: 24px;
+    border: none;
+    border-radius: 12px;
+}
+
+/* Thanks */
+main .thanks {
+  text-align: center;
+  padding: 24px;
+  background: var(--color5);
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  background-color: var(--color6);
+}
+
+footer .footer-widget {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+footer .footer-widget .widget h3 {
+  text-align: center;
+  font-weight: 800;
+  padding-bottom: 12px;
+}
+
+footer .footer-widget .sosmed ul {
+  display: flex;
+  gap: 12px;
+}
+
+footer .footer-bottom {
+  text-align: center;
+  padding-top: 24px;
+}

@@ -1,0 +1,2 @@
+RewriteEngine On
+RewriteRule ^biolinks/bio/([^/]+)$ biolinks/bio/biolinks.php?username=$1 [L,QSA]
