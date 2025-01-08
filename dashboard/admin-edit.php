@@ -143,6 +143,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 }
 
+if($image == null){
+    $image = "../assets/images/avatar.png";
+}
+
 ?>
 
 <!DOCTYPE html>

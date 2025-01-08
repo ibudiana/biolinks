@@ -1,5 +1,10 @@
 <?php
-
+session_start();
+if($_SESSION['daftar'] != "berhasil"){
+    header("Location: sign-up.php");
+}else{
+    session_destroy();
+}
 
 ?>
 
@@ -30,8 +35,9 @@
             </div>
             <div class="right">
                 <ul>
-                <li><a href="#">Dashboard</a></li>
-                <li><button class="btn">Try Free</button></li>
+                    <li>
+                        <a href="<?php echo $domain; ?>/sign-up.php"><button class="btn">Try Free</button></a>
+                    </li>
                 </ul>
             </div>
         </nav>

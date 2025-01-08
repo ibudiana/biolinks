@@ -29,4 +29,3 @@ CREATE TABLE profile (
     deleted_at DATETIME DEFAULT NULL,
     FOREIGN KEY (user_id) REFERENCES User(id) ON DELETE CASCADE
 );
-

@@ -16,7 +16,7 @@
     <header>
         <nav>
             <div class="logo">
-                <img src="assets/images/logo.png" alt="Logo">
+                <a href="<?php echo $domain; ?>"><img src="assets/images/logo.png" alt="Logo"></a>
             </div>
             <div class="menu">
                 <ul>
@@ -29,8 +29,9 @@
             </div>
             <div class="right">
                 <ul>
-                <li><a href="#">Dashboard</a></li>
-                <li><button class="btn">Try Free</button></li>
+                    <li>
+                        <a href="<?php echo $domain; ?>sign-up.php"><button class="btn">Try Free</button></a>
+                    </li>
                 </ul>
             </div>
         </nav>
@@ -41,8 +42,8 @@
                 <h2>LET'S CREATE</h2>
                 <h3>JUST ONE LINK FOR EVERY THING</h3>
                 <p>Place all your necessary links in one location</p>
-                <button class="btn">Start for Free</button><br/>
-                <span>Allready on buildlinks <a href="#">Log in</a></span>
+                <a href="<?php echo $domain; ?>sign-up.php"><button class="btn">Start for Free</button></a><br/>
+                <span>Allready on buildlinks <a href="<?php echo $domain; ?>login.php">Log in</a></span>
                 <h4>The one link to rule them all</h4>
                 <div class="card">
                     <div class="card-item">

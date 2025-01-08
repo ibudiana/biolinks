@@ -127,7 +127,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <h2>Member Detail</h2>
                         <input type="text" name="username" id="username" placeholder="Username" required>
                         <input type="email" name="email" id="email" placeholder="Email" required>
-                        <input type="password" name="password" id="password"  placeholder="Password" required>
+                        <input type="password" name="password" id="password" minlength="6" placeholder="Password" required>
                         <input type="password" name="confirm_password" id="confirm_password"  placeholder="Password" required>
                     </div>
 

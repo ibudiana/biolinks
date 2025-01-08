@@ -18,6 +18,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $create_member = sign_up_member($data);
 
         if($create_member){
+            session_start();
+            $_SESSION['daftar'] = "berhasil";
             header('Location: thanks.php');
         }else{
             echo '<script>alert( "Create member gagal")</script>';
@@ -42,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <header>
         <nav>
             <div class="logo">
-                <img src="assets/images/logo.png" alt="Logo">
+                <a href="<?php echo $domain; ?>"><img src="assets/images/logo.png" alt="Logo"></a>
             </div>
             <div class="menu">
                 <ul>
@@ -55,8 +57,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </div>
             <div class="right">
                 <ul>
-                <li><a href="#">Dashboard</a></li>
-                <li><button class="btn">Try Free</button></li>
+                    <li>
+                        <a href="<?php echo $domain; ?>/sign-up.php"><button class="btn">Try Free</button></a>
+                    </li>
                 </ul>
             </div>
         </nav>
@@ -67,13 +70,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <h2>Come join us!</h2>
                 <p>We are so excited to have you here. If you haven’t already, create an account to get access to exclusive offers, rewards, and discounts</p>
                 <h3>Start for Free</h3>
-                <span>Allready on buildlinks <a href="/login.php">Log in</a></span>
+                <span>Allready on buildlinks <a href="<?php echo $domain; ?>/login.php">Log in</a></span>
             </div>
             <div class="sign-up-right">
                 <form id="signupForm" action="" method="post">
                     <input type="text" name="username" id="username" placeholder="Username" required>
                     <input type="email" name="email" id="email" placeholder="Email" required>
-                    <input type="password" name="password" id="password"  placeholder="Password" required>
+                    <input type="password" name="password" id="password" minlength="6"  placeholder="Password" required>
                     <input type="password" name="confirm_password" id="confirm_password"  placeholder="Password" required>
                     <button class="btn" type="submit">Sign Up</button>
                 </form>
